@@ -56,15 +56,63 @@
 		C3F8EDC82B8FCB8400F296F2 /* RickandMortyApp-MVVM */ = {
 			isa = PBXGroup;
 			children = (
-				C3F8EDC92B8FCB8400F296F2 /* AppDelegate.swift */,
-				C3F8EDCB2B8FCB8400F296F2 /* SceneDelegate.swift */,
-				C3F8EDCD2B8FCB8400F296F2 /* ViewController.swift */,
+				C3F8EDDD2B8FCB8B00F296F2 /* Core */,
+				C3F8EDDE2B8FCB9000F296F2 /* Features */,
 				C3F8EDCF2B8FCB8400F296F2 /* Main.storyboard */,
-				C3F8EDD22B8FCB8500F296F2 /* Assets.xcassets */,
 				C3F8EDD42B8FCB8500F296F2 /* LaunchScreen.storyboard */,
 				C3F8EDD72B8FCB8500F296F2 /* Info.plist */,
 			);
 			path = "RickandMortyApp-MVVM";
+			sourceTree = "<group>";
+		};
+		C3F8EDDD2B8FCB8B00F296F2 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				C3F8EDC92B8FCB8400F296F2 /* AppDelegate.swift */,
+				C3F8EDCB2B8FCB8400F296F2 /* SceneDelegate.swift */,
+				C3F8EDD22B8FCB8500F296F2 /* Assets.xcassets */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		C3F8EDDE2B8FCB9000F296F2 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				C3F8EDE22B8FCBA500F296F2 /* NetworkLayer */,
+				C3F8EDE12B8FCB9F00F296F2 /* ViewModel */,
+				C3F8EDE02B8FCB9B00F296F2 /* View */,
+				C3F8EDDF2B8FCB9500F296F2 /* Model */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		C3F8EDDF2B8FCB9500F296F2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C3F8EDE02B8FCB9B00F296F2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C3F8EDE12B8FCB9F00F296F2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C3F8EDCD2B8FCB8400F296F2 /* ViewController.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C3F8EDE22B8FCBA500F296F2 /* NetworkLayer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NetworkLayer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
