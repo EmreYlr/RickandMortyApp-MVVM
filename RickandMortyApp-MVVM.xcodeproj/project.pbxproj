@@ -22,6 +22,7 @@
 		C3F8EDD62B8FCB8500F296F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3F8EDD42B8FCB8500F296F2 /* LaunchScreen.storyboard */; };
 		C3FF48E22B934DDF008472F9 /* CharacterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FF48E02B934DDF008472F9 /* CharacterCollectionViewCell.swift */; };
 		C3FF48E32B934DDF008472F9 /* CharacterCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3FF48E12B934DDF008472F9 /* CharacterCollectionViewCell.xib */; };
+		C3FF48E52B935CAD008472F9 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FF48E42B935CAD008472F9 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		C3F8EDD72B8FCB8500F296F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C3FF48E02B934DDF008472F9 /* CharacterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCollectionViewCell.swift; sourceTree = "<group>"; };
 		C3FF48E12B934DDF008472F9 /* CharacterCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterCollectionViewCell.xib; sourceTree = "<group>"; };
+		C3FF48E42B935CAD008472F9 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 			children = (
 				C319E35C2B90D6A400BD73E3 /* SubView */,
 				C3F8EDCD2B8FCB8400F296F2 /* CharacterViewController.swift */,
+				C3FF48E42B935CAD008472F9 /* DetailViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 				C319E3552B906C7900BD73E3 /* Character.swift in Sources */,
 				C3F8EDCE2B8FCB8400F296F2 /* CharacterViewController.swift in Sources */,
 				C319E34B2B9068FA00BD73E3 /* NetworkHelper.swift in Sources */,
+				C3FF48E52B935CAD008472F9 /* DetailViewController.swift in Sources */,
 				C3F8EDCA2B8FCB8400F296F2 /* AppDelegate.swift in Sources */,
 				C3F8EDCC2B8FCB8400F296F2 /* SceneDelegate.swift in Sources */,
 			);

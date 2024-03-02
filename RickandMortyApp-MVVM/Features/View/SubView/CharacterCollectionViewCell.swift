@@ -9,8 +9,8 @@ import UIKit
 
 class CharacterCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var cellImageView: UIImageView!
-    
     @IBOutlet weak var cellLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         layer.borderWidth = 1

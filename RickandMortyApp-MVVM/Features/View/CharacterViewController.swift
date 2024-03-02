@@ -25,6 +25,7 @@ class CharacterViewController: UIViewController {
         
     }
 }
+//MARK: -CharacterViewModel
 extension CharacterViewController: CharacterViewModelOutputProtocol {
     func update() {
         collectionView.reloadData()
@@ -36,6 +37,7 @@ extension CharacterViewController: CharacterViewModelOutputProtocol {
     }
 }
 
+//MARK: -CollectionView
 extension CharacterViewController: UICollectionViewDelegate,UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -55,6 +57,12 @@ extension CharacterViewController: UICollectionViewDelegate,UICollectionViewData
             }
         }
         return cell
+    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let char = characterViewModel.characters?.results[indexPath.row]
+        let detailVC = DetailViewController()
+        detailVC.char = char
+        navigationController?.pushViewController(detailVC, animated: true)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
