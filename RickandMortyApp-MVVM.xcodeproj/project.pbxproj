@@ -13,8 +13,6 @@
 		C319E3502B906A2200BD73E3 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C319E34F2B906A2200BD73E3 /* Alamofire */; };
 		C319E3532B906A3300BD73E3 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = C319E3522B906A3300BD73E3 /* Kingfisher */; };
 		C319E3552B906C7900BD73E3 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = C319E3542B906C7900BD73E3 /* Character.swift */; };
-		C319E35A2B90D5BC00BD73E3 /* CharacterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C319E3582B90D5BC00BD73E3 /* CharacterCollectionViewCell.swift */; };
-		C319E35B2B90D5BC00BD73E3 /* CharacterCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C319E3592B90D5BC00BD73E3 /* CharacterCollectionViewCell.xib */; };
 		C319E35E2B90DA3500BD73E3 /* CharacterCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C319E35D2B90DA3500BD73E3 /* CharacterCollectionView.swift */; };
 		C3F8EDCA2B8FCB8400F296F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F8EDC92B8FCB8400F296F2 /* AppDelegate.swift */; };
 		C3F8EDCC2B8FCB8400F296F2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F8EDCB2B8FCB8400F296F2 /* SceneDelegate.swift */; };
@@ -22,6 +20,8 @@
 		C3F8EDD12B8FCB8400F296F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3F8EDCF2B8FCB8400F296F2 /* Main.storyboard */; };
 		C3F8EDD32B8FCB8500F296F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3F8EDD22B8FCB8500F296F2 /* Assets.xcassets */; };
 		C3F8EDD62B8FCB8500F296F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3F8EDD42B8FCB8500F296F2 /* LaunchScreen.storyboard */; };
+		C3FF48E22B934DDF008472F9 /* CharacterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FF48E02B934DDF008472F9 /* CharacterCollectionViewCell.swift */; };
+		C3FF48E32B934DDF008472F9 /* CharacterCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3FF48E12B934DDF008472F9 /* CharacterCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,8 +29,6 @@
 		C319E34A2B9068FA00BD73E3 /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
 		C319E34C2B90692300BD73E3 /* CharacterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewModel.swift; sourceTree = "<group>"; };
 		C319E3542B906C7900BD73E3 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
-		C319E3582B90D5BC00BD73E3 /* CharacterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCollectionViewCell.swift; sourceTree = "<group>"; };
-		C319E3592B90D5BC00BD73E3 /* CharacterCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterCollectionViewCell.xib; sourceTree = "<group>"; };
 		C319E35D2B90DA3500BD73E3 /* CharacterCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCollectionView.swift; sourceTree = "<group>"; };
 		C3F8EDC62B8FCB8400F296F2 /* RickandMortyApp-MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RickandMortyApp-MVVM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3F8EDC92B8FCB8400F296F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -40,6 +38,8 @@
 		C3F8EDD22B8FCB8500F296F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C3F8EDD52B8FCB8500F296F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C3F8EDD72B8FCB8500F296F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C3FF48E02B934DDF008472F9 /* CharacterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCollectionViewCell.swift; sourceTree = "<group>"; };
+		C3FF48E12B934DDF008472F9 /* CharacterCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,9 +58,9 @@
 		C319E35C2B90D6A400BD73E3 /* SubView */ = {
 			isa = PBXGroup;
 			children = (
-				C319E3582B90D5BC00BD73E3 /* CharacterCollectionViewCell.swift */,
-				C319E3592B90D5BC00BD73E3 /* CharacterCollectionViewCell.xib */,
 				C319E35D2B90DA3500BD73E3 /* CharacterCollectionView.swift */,
+				C3FF48E02B934DDF008472F9 /* CharacterCollectionViewCell.swift */,
+				C3FF48E12B934DDF008472F9 /* CharacterCollectionViewCell.xib */,
 			);
 			path = SubView;
 			sourceTree = "<group>";
@@ -214,7 +214,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C319E35B2B90D5BC00BD73E3 /* CharacterCollectionViewCell.xib in Resources */,
+				C3FF48E32B934DDF008472F9 /* CharacterCollectionViewCell.xib in Resources */,
 				C3F8EDD62B8FCB8500F296F2 /* LaunchScreen.storyboard in Resources */,
 				C3F8EDD32B8FCB8500F296F2 /* Assets.xcassets in Resources */,
 				C3F8EDD12B8FCB8400F296F2 /* Main.storyboard in Resources */,
@@ -228,10 +228,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C319E35A2B90D5BC00BD73E3 /* CharacterCollectionViewCell.swift in Sources */,
 				C319E34D2B90692300BD73E3 /* CharacterViewModel.swift in Sources */,
 				C319E3492B9068F100BD73E3 /* NetworkManager.swift in Sources */,
 				C319E35E2B90DA3500BD73E3 /* CharacterCollectionView.swift in Sources */,
+				C3FF48E22B934DDF008472F9 /* CharacterCollectionViewCell.swift in Sources */,
 				C319E3552B906C7900BD73E3 /* Character.swift in Sources */,
 				C3F8EDCE2B8FCB8400F296F2 /* CharacterViewController.swift in Sources */,
 				C319E34B2B9068FA00BD73E3 /* NetworkHelper.swift in Sources */,

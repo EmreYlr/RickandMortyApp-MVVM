@@ -1,67 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="RaMCell" id="gTV-IL-0wX" customClass="CharacterCollectionViewCell" customModule="RickandMortyApp_MVVM" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="gTV-IL-0wX" customClass="CharacterCollectionViewCell" customModule="RickandMortyApp_MVVM" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qmB-s1-3pT" customClass="CharacterCollectionViewCell" customModule="RickandMortyApp_MVVM" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bx8-63-YKA">
-                                <rect key="frame" x="75" y="166" width="52" height="24"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="10" translatesAutoresizingMaskIntoConstraints="NO" id="joP-QI-eCd">
-                                <rect key="frame" x="25" y="8" width="150" height="150"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yzF-oW-S0S">
+                        <rect key="frame" x="25" y="10.999999999999986" width="250" height="250.66666666666663"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9If-Ju-fjY">
+                        <rect key="frame" x="25" y="262" width="250" height="38"/>
                         <constraints>
-                            <constraint firstItem="bx8-63-YKA" firstAttribute="leading" secondItem="qmB-s1-3pT" secondAttribute="leading" constant="75" id="6Gx-Ci-wY6"/>
-                            <constraint firstItem="joP-QI-eCd" firstAttribute="leading" secondItem="qmB-s1-3pT" secondAttribute="leading" constant="25" id="8Dr-qc-J0G"/>
-                            <constraint firstItem="joP-QI-eCd" firstAttribute="centerX" secondItem="qmB-s1-3pT" secondAttribute="centerX" id="IJ3-IH-ZXo"/>
-                            <constraint firstItem="bx8-63-YKA" firstAttribute="top" secondItem="joP-QI-eCd" secondAttribute="bottom" constant="8" id="Pji-wo-ydU"/>
-                            <constraint firstItem="joP-QI-eCd" firstAttribute="bottom" secondItem="qmB-s1-3pT" secondAttribute="bottomMargin" id="hnF-O1-oa3"/>
-                            <constraint firstItem="joP-QI-eCd" firstAttribute="top" secondItem="qmB-s1-3pT" secondAttribute="top" constant="8" id="qfe-Rc-6js"/>
+                            <constraint firstAttribute="height" constant="38" id="Tx2-lc-EPS"/>
                         </constraints>
-                    </view>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
-                <constraint firstItem="qmB-s1-3pT" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="4aX-Ge-Mng"/>
-                <constraint firstItem="qmB-s1-3pT" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="Ns4-fb-93b"/>
-                <constraint firstItem="qmB-s1-3pT" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="rAp-ye-efx"/>
-                <constraint firstItem="qmB-s1-3pT" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="z4Q-u1-sKW"/>
+                <constraint firstItem="yzF-oW-S0S" firstAttribute="leading" secondItem="9If-Ju-fjY" secondAttribute="leading" id="0dV-pB-z6K"/>
+                <constraint firstItem="yzF-oW-S0S" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="33f-uA-RbB"/>
+                <constraint firstItem="9If-Ju-fjY" firstAttribute="top" secondItem="yzF-oW-S0S" secondAttribute="bottom" constant="0.33333333333337123" id="3RX-Jg-oMH"/>
+                <constraint firstAttribute="bottom" secondItem="9If-Ju-fjY" secondAttribute="bottom" id="7PV-rx-oh6"/>
+                <constraint firstItem="yzF-oW-S0S" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="25" id="I3H-5l-RxD"/>
+                <constraint firstItem="yzF-oW-S0S" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="11" id="UEn-hm-HG7"/>
+                <constraint firstItem="yzF-oW-S0S" firstAttribute="trailing" secondItem="9If-Ju-fjY" secondAttribute="trailing" id="fEB-8j-h37"/>
             </constraints>
-            <size key="customSize" width="200" height="257"/>
             <connections>
-                <outlet property="cellImageView" destination="joP-QI-eCd" id="adH-6O-H74"/>
-                <outlet property="cellLabel" destination="bx8-63-YKA" id="MWJ-5r-geh"/>
-                <outlet property="cellLbl" destination="bx8-63-YKA" id="cFl-Z1-01A"/>
+                <outlet property="cellImageView" destination="yzF-oW-S0S" id="MOK-DH-CK5"/>
+                <outlet property="cellLabel" destination="9If-Ju-fjY" id="KUx-HA-7iB"/>
             </connections>
-            <point key="canvasLocation" x="164" y="200"/>
+            <point key="canvasLocation" x="56.488549618320612" y="20.422535211267608"/>
         </collectionViewCell>
     </objects>
-    <resources>
-        <image name="10" width="320" height="200"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-    </resources>
 </document>
