@@ -10,12 +10,10 @@ import UIKit
 class CharacterCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var cellImageView: UIImageView!
     @IBOutlet weak var cellLabel: UILabel!
-    
     override func awakeFromNib() {
         super.awakeFromNib()
-        layer.borderWidth = 1
-        layer.cornerRadius = 23
-        cellImageView.layer.cornerRadius = 23
+        layer.borderWidth = 2
+        layer.cornerRadius = 18
+        cellImageView.layer.cornerRadius = 18
     }
-
 }

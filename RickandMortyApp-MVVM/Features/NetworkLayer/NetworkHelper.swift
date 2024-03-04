@@ -35,7 +35,7 @@ enum ErrorTypes: String,Error {
 
 
 enum RaMPath: String {
-    case CHAR = "/character"
+    case CHAR = "/character/?page="
 }
 
 extension RaMPath {

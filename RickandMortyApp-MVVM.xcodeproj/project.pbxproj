@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C31744722B964E1800BFA921 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31744712B964E1800BFA921 /* DetailViewModel.swift */; };
+		C31744742B96542D00BFA921 /* CharacterViewController+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31744732B96542D00BFA921 /* CharacterViewController+CollectionView.swift */; };
 		C319E3492B9068F100BD73E3 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C319E3482B9068F100BD73E3 /* NetworkManager.swift */; };
 		C319E34B2B9068FA00BD73E3 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C319E34A2B9068FA00BD73E3 /* NetworkHelper.swift */; };
 		C319E34D2B90692300BD73E3 /* CharacterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C319E34C2B90692300BD73E3 /* CharacterViewModel.swift */; };
@@ -26,6 +28,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C31744712B964E1800BFA921 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		C31744732B96542D00BFA921 /* CharacterViewController+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CharacterViewController+CollectionView.swift"; sourceTree = "<group>"; };
 		C319E3482B9068F100BD73E3 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		C319E34A2B9068FA00BD73E3 /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
 		C319E34C2B90692300BD73E3 /* CharacterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewModel.swift; sourceTree = "<group>"; };
@@ -130,6 +134,7 @@
 				C319E35C2B90D6A400BD73E3 /* SubView */,
 				C3F8EDCD2B8FCB8400F296F2 /* CharacterViewController.swift */,
 				C3FF48E42B935CAD008472F9 /* DetailViewController.swift */,
+				C31744732B96542D00BFA921 /* CharacterViewController+CollectionView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -138,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				C319E34C2B90692300BD73E3 /* CharacterViewModel.swift */,
+				C31744712B964E1800BFA921 /* DetailViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -240,6 +246,8 @@
 				C319E34B2B9068FA00BD73E3 /* NetworkHelper.swift in Sources */,
 				C3FF48E52B935CAD008472F9 /* DetailViewController.swift in Sources */,
 				C3F8EDCA2B8FCB8400F296F2 /* AppDelegate.swift in Sources */,
+				C31744742B96542D00BFA921 /* CharacterViewController+CollectionView.swift in Sources */,
+				C31744722B964E1800BFA921 /* DetailViewModel.swift in Sources */,
 				C3F8EDCC2B8FCB8400F296F2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

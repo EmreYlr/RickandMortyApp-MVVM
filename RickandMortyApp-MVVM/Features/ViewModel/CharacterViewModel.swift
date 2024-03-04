@@ -9,8 +9,10 @@ import Foundation
 
 protocol CharacterViewModelProtocol {
     var characters: [Result] { get }
+    var totalPages : Int { get }
+    var currentPage : Int { get }
     var delegate: CharacterViewModelOutputProtocol? { get set }
-    func fetchData(pageNum: Int)
+    func fetchData()
 }
 
 protocol CharacterViewModelOutputProtocol: AnyObject {
@@ -20,16 +22,19 @@ protocol CharacterViewModelOutputProtocol: AnyObject {
 
 final class CharacterViewModel {
     private(set) var characters: [Result] = []
+    private(set) var totalPages: Int = 0
+    private(set) var currentPage = 1
     weak var delegate: CharacterViewModelOutputProtocol?
     
-    func fetchData(pageNum: Int){
-        //page kısmını path enuma al
-        if let url = URL(string: "\(RaMPath.CHAR.withBaseUrl())?page=\(pageNum)") {
+    func fetchData(){
+        if let url = URL(string: "\(RaMPath.CHAR.withBaseUrl())\(currentPage)") {
             NetworkManager.shared.request(from: url, method: .get) { [weak self] (result: Swift.Result<Character, ErrorTypes>) in
                 switch result {
                 case .success(let data):
                     self?.characters
                         .append(contentsOf: data.results)
+                    self?.totalPages = data.info.pages
+                    self?.currentPage += 1
                     self?.delegate?.update()
                 case .failure(let error):
                     print("Hata: \(error)")
