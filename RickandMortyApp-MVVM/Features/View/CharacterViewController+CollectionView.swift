@@ -8,6 +8,8 @@
 import Foundation
 import UIKit
 
+//https://rickandmortyapi.com/api/character/?name=rick -> Filter URL
+
 //MARK: -CollectionView
 extension CharacterViewController: UICollectionViewDelegate,UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
