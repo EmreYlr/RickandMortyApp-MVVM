@@ -6,14 +6,30 @@
 //
 
 import UIKit
+import Kingfisher
 
 class CharacterCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var cellImageView: UIImageView!
     @IBOutlet weak var cellLabel: UILabel!
+    @IBOutlet weak var cellLoadIndicator: NSLayoutConstraint!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         layer.borderWidth = 2
         layer.cornerRadius = 18
+    }
+    
+    func mainCellConfiguration(with imageURL: URL, with name: String) {
         cellImageView.layer.cornerRadius = 18
+        DispatchQueue.main.async {
+            self.cellImageView.kf.indicatorType = .activity
+            self.cellImageView.kf.setImage(with: imageURL)
+            self.cellLabel.text = name
+        }
+        
+    }
+    
+    func loadCellConfiguration() {
+        cellLoadIndicator.isActive = true
     }
 }

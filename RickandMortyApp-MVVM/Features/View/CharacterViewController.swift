@@ -66,12 +66,14 @@ extension CharacterViewController: CharacterViewModelOutputProtocol {
 
 extension CharacterViewController: UISearchResultsUpdating, UISearchBarDelegate {
     func updateSearchResults(for searchController: UISearchController) {
-        let searchText = searchController.searchBar.text!
-        if !searchText.isEmpty {
-            searching = true
-        }else {
-            searching = false
-        }
+//        if let searchText = searchController.searchBar.text {
+//
+//        }
+//        if !searchText.isEmpty {
+//            searching = true
+//        }else {
+//            searching = false
+//        }
         //collectionView.reloadData()
     }
     

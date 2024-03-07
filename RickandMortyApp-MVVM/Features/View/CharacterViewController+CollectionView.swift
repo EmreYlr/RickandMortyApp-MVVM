@@ -18,15 +18,20 @@ extension CharacterViewController: UICollectionViewDelegate,UICollectionViewData
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as? CharacterCollectionViewCell else {
-            return UICollectionViewCell()
+        if indexPath.row == characterViewModel.characters.count - 1 {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "loadingCell", for: indexPath) as! CharacterCollectionViewCell
+            cell.loadCellConfiguration()
+            return cell
         }
-        let char = characterViewModel.characters[indexPath.row]
-        if let imageURL = URL(string: char.image) {
-            DispatchQueue.main.async {
-                cell.cellImageView.kf.indicatorType = .activity
-                cell.cellImageView.kf.setImage(with: imageURL)
-                cell.cellLabel.text = char.name
+        else {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! CharacterCollectionViewCell
+            let char = characterViewModel.characters[indexPath.row]
+            if let imageURL = URL(string: char.image) {
+                cell.mainCellConfiguration(with: imageURL, with: char.name)
+            }
+            return cell
+        }
+        
 //                if char.status == "Alive"{
 //                    cell.layer.borderColor = UIColor(red: 0.48, green: 0.77, blue: 0.62, alpha: 1.00).cgColor
 //                }else if char.status == "Dead"{
@@ -34,9 +39,6 @@ extension CharacterViewController: UICollectionViewDelegate,UICollectionViewData
 //                }else {
 //                    cell.layer.borderColor = UIColor.systemGray.cgColor
 //                }
-            }
-        }
-        return cell
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let char = characterViewModel.characters[indexPath.row]
@@ -51,9 +53,10 @@ extension CharacterViewController: UICollectionViewDelegate,UICollectionViewData
         return CGSize(width: size, height: size)
     }
     
-    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        if indexPath.item == characterViewModel.characters.count - 1 , characterViewModel.currentPage < characterViewModel.totalPages {
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {        
+        if indexPath.item == characterViewModel.characters.count - 1 , characterViewModel.nextPageUrl != nil {
             loadData()
         }
+        //characterViewModel.currentPage < characterViewModel.totalPages
     }
 }
