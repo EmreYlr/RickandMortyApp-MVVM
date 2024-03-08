@@ -12,10 +12,7 @@ final class CharacterViewController: UIViewController {
     //MARK: -VARIABLES
     @IBOutlet weak var collectionView: UICollectionView!
     var characterViewModel: CharacterViewModelProtocol = CharacterViewModel()
-    let refreshControl = UIRefreshControl()
-    
-    var searching = false
-    let searchController = UISearchController(searchResultsController: nil)
+    private let refreshControl = UIRefreshControl()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +21,7 @@ final class CharacterViewController: UIViewController {
     }
     
     private func configureSearchController() {
+        let searchController = UISearchController(searchResultsController: nil)
         searchController.loadViewIfNeeded()
         searchController.searchResultsUpdater = self
         searchController.searchBar.delegate = self
@@ -34,7 +32,6 @@ final class CharacterViewController: UIViewController {
         self.navigationItem.hidesSearchBarWhenScrolling = false
         definesPresentationContext = true
         searchController.searchBar.placeholder = "Search Character By Name"
-        
     }
     
     @objc func loadData() {
@@ -70,14 +67,12 @@ extension CharacterViewController: UISearchResultsUpdating, UISearchBarDelegate 
     
     func updateSearchResults(for searchController: UISearchController) {
         if let searchText = searchController.searchBar.text {
-            characterViewModel.isSearch = true
             characterViewModel.fetchData(filterByName: searchText)
         }
     }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         characterViewModel.fetchData(filterByName: nil)
-        characterViewModel.isSearch = false
     }
     
     

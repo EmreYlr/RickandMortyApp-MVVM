@@ -10,7 +10,6 @@ import Foundation
 protocol CharacterViewModelProtocol {
     var characters: [Result] { get }
     var nextPageUrl : String? { get }
-    var isSearch: Bool { get set }
     var delegate: CharacterViewModelOutputProtocol? { get set }
     func fetchData(filterByName name: String?)
 }
@@ -23,17 +22,15 @@ protocol CharacterViewModelOutputProtocol: AnyObject {
 final class CharacterViewModel {
     private(set) var characters: [Result] = []
     private(set) var nextPageUrl: String?
-    var isSearch: Bool = false
     weak var delegate: CharacterViewModelOutputProtocol?
     
     func fetchData(filterByName name: String?) {
         var parameters: [String: Any] = [:]
         
-        if isSearch {
+        if let name {
             characters.removeAll()
             parameters["name"] = name
             nextPageUrl = nil
-            isSearch = false
         }
         
         if let url = URL(string: nextPageUrl ?? "\(RaMPath.CHAR.withBaseUrl())") {
