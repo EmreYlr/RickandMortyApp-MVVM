@@ -8,8 +8,6 @@
 import Foundation
 import UIKit
 
-//https://rickandmortyapi.com/api/character/?name=rick -> Filter URL
-
 //MARK: -CollectionView
 extension CharacterViewController: UICollectionViewDelegate,UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
@@ -18,7 +16,7 @@ extension CharacterViewController: UICollectionViewDelegate,UICollectionViewData
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if indexPath.row == characterViewModel.characters.count - 1 {
+        if indexPath.row == characterViewModel.characters.count - 1, characterViewModel.nextPageUrl != nil {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "loadingCell", for: indexPath) as! CharacterCollectionViewCell
             cell.loadCellConfiguration()
             return cell
@@ -31,14 +29,6 @@ extension CharacterViewController: UICollectionViewDelegate,UICollectionViewData
             }
             return cell
         }
-        
-//                if char.status == "Alive"{
-//                    cell.layer.borderColor = UIColor(red: 0.48, green: 0.77, blue: 0.62, alpha: 1.00).cgColor
-//                }else if char.status == "Dead"{
-//                    cell.layer.borderColor = UIColor(red: 1.00, green: 0.68, blue: 0.68, alpha: 1.00).cgColor
-//                }else {
-//                    cell.layer.borderColor = UIColor.systemGray.cgColor
-//                }
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let char = characterViewModel.characters[indexPath.row]
@@ -57,6 +47,5 @@ extension CharacterViewController: UICollectionViewDelegate,UICollectionViewData
         if indexPath.item == characterViewModel.characters.count - 1 , characterViewModel.nextPageUrl != nil {
             loadData()
         }
-        //characterViewModel.currentPage < characterViewModel.totalPages
     }
 }

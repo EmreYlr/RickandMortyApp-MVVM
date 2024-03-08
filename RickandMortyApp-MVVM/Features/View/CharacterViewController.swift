@@ -38,13 +38,13 @@ final class CharacterViewController: UIViewController {
     }
     
     @objc func loadData() {
-        characterViewModel.fetchData()
+        characterViewModel.fetchData(filterByName: nil)
         refreshControl.endRefreshing()
     }
     
     private func initLoad(){
         characterViewModel.delegate = self
-        characterViewModel.fetchData()
+        characterViewModel.fetchData(filterByName: nil)
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.collectionViewLayout = UICollectionViewFlowLayout()
@@ -53,6 +53,7 @@ final class CharacterViewController: UIViewController {
         collectionView?.refreshControl = refreshControl
     }
 }
+
 //MARK: -CharacterViewModelOutput
 extension CharacterViewController: CharacterViewModelOutputProtocol {
     func update() {
@@ -64,17 +65,19 @@ extension CharacterViewController: CharacterViewModelOutputProtocol {
     }
 }
 
+//MARK: -SearchBarController
 extension CharacterViewController: UISearchResultsUpdating, UISearchBarDelegate {
+    
     func updateSearchResults(for searchController: UISearchController) {
-//        if let searchText = searchController.searchBar.text {
-//
-//        }
-//        if !searchText.isEmpty {
-//            searching = true
-//        }else {
-//            searching = false
-//        }
-        //collectionView.reloadData()
+        if let searchText = searchController.searchBar.text {
+            characterViewModel.isSearch = true
+            characterViewModel.fetchData(filterByName: searchText)
+        }
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        characterViewModel.fetchData(filterByName: nil)
+        characterViewModel.isSearch = false
     }
     
     
